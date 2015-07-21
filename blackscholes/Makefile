@@ -1,5 +1,3 @@
-PREFIX=${PARSECDIR}/pkgs/apps/blackscholes/inst/${PARSECPLAT}
-
 CSRC    = $(SRC)
 TARGET  = blackscholes
 M4_BASE = .
@@ -54,7 +52,7 @@ ifdef double
 NCO = -DNCO=2
 endif
 
-CXXFLAGS += $(MT) $(NCO) $(FUNC) $(ERR) $(CSRC)
+CXXFLAGS += -m32 $(MT) $(NCO) $(FUNC) $(ERR) $(CSRC)
 
 all: $(TARGET)
 
