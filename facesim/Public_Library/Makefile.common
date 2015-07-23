@@ -82,7 +82,7 @@ ifeq ($(TYPE),cachegrind)
 USE_ALAMERE_PTHREADS=no
 USE_ALAMERE_TASKQ=no
 CACHEGRIND_API_DIR = $(HOME)/cachegrind
-PHYSBAM_CC = g++
+PHYSBAM_CC = g++ -m32
 CC_FLAGS += -I$(CACHEGRIND_API_DIR) -DCACHEGRIND
 LINK_FLAGS += -L$(CACHEGRIND_API_DIR) -lcachegrind
 endif
@@ -95,7 +95,7 @@ VTUNEAPIDIR = $(PHYSBAM)/VTune
 SEPDIR = $(HOME)/sep
 ifeq ($(ENABLE_VTUNE),yes)
 # sampling library doesn't link with code compiled with icc 8.1
-PHYSBAM_CC = g++
+PHYSBAM_CC = g++ -m32
 $(warning ***Enabling sampling support - compiling with g++***)
 endif
 endif
@@ -193,7 +193,7 @@ endif
 endif
 
 ifndef PHYSBAM_CC
-    PHYSBAM_CC = $(CXX)
+    PHYSBAM_CC = $(CXX) -m32
 endif
 
 ifndef PHYSBAM_CC_DEPEND

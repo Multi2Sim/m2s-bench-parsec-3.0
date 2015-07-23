@@ -1,5 +1,8 @@
 all: taskQ.o
 
 taskQ.o: 
-	$(CXX) $(CXXFLAGS) -DTASKQ_DIST_FIXED -c taskQDistCommon.c
+	$(CXX) -m32 $(CXXFLAGS) -DTASKQ_DIST_FIXED -c taskQDistCommon.c
 	mv taskQDistCommon.o taskQ.o
+
+clean:
+	rm taskQ.o
