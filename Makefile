@@ -1,14 +1,18 @@
 SUBDIRS = \
 	blackscholes \
+	bodytrack \
 	facesim 
 
 BINARIES = \
 	blackscholes/blackscholes \
+	bodytrack/bodytrack \
 	facesim/facesim_exe
 
 DATA_FILES = \
 	blackscholes/data-medium \
 	blackscholes/data-small \
+	bodytrack/data-medium \
+	bodytrack/data-small \
 	facesim/data-medium \
 	facesim/data-small \
 
@@ -16,6 +20,7 @@ EXTRA_DIST = \
 	blackscholes/benchmark.ini \
 	blackscholes/COPYRIGHT \
 	blackscholes/README \
+	bodytrack/benchmark.ini \
 	facesim/benchmark.ini \
 	facesim/LICENSE \
 	facesim/COPYRIGHT \
